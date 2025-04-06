@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "扇贝拼写助手",
+    "description": "按↓健跳过时态拼写，支持快捷操作和视觉反馈",
+    "version": "0.2.0",
+    "content_scripts": [
+        {
+            "matches": [
+                "*://web.shanbay.com/*",
+                "https://web.shanbay.com/*"
+            ],
+            "js": ["content/index.js"],
+            "run_at": "document_end"
+        }
+    ],
+    "web_accessible_resources": [{
+        "resources": ["content/*.js"],
+        "matches": ["*://web.shanbay.com/*"]
+    }],
+    "permissions": [
+        "activeTab"
+    ]
+}
